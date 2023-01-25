@@ -20,14 +20,20 @@ class _StatusPageState extends State<StatusPage> {
           leading: CircleAvatar(
             backgroundColor: Colors.grey,
           ),
-          title: const Text('My Status'),
+          title: const Text(
+            'My Status',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           subtitle: const Text('Tap To Add Your Status'),
         ),
         const Padding(
           padding: EdgeInsets.only(left: 20),
           child: Align(
             alignment: Alignment.topLeft,
-            child: Text('Viewed Updates'),
+            child: Text(
+              'Viewed Updates',
+              style: TextStyle(color: Colors.black54),
+            ),
           ),
         ),
         Flexible(
@@ -38,9 +44,14 @@ class _StatusPageState extends State<StatusPage> {
               ListTile(
                 leading: CircleAvatar(
                   backgroundColor: Colors.grey,
-                  backgroundImage: AssetImage(statusData[index].avatar),
+                  backgroundImage: AssetImage(
+                    statusData[index].avatar,
+                  ),
                 ),
-                title: Text(statusData[index].name),
+                title: Text(
+                  statusData[index].name,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
                 subtitle: Text(statusData[index].time),
               )
             ],
